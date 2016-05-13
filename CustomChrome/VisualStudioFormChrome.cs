@@ -193,6 +193,8 @@ namespace CustomChrome
 
             if (state.DrawIcon)
             {
+                e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.Half;
+
                 e.Graphics.DrawImage(
                     GetFormIcon(),
                     leftOffset,
@@ -200,6 +202,8 @@ namespace CustomChrome
                     IconSize.Width,
                     IconSize.Height
                 );
+
+                e.Graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.Default;
 
                 leftOffset += IconSize.Width;
             }
