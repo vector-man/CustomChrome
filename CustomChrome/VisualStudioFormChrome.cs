@@ -196,7 +196,9 @@ namespace CustomChrome
                 e.Graphics.DrawImage(
                     GetFormIcon(),
                     leftOffset,
-                    IconOffset.Y + border.Top
+                    IconOffset.Y + border.Top,
+                    IconSize.Width,
+                    IconSize.Height
                 );
 
                 leftOffset += IconSize.Width;
